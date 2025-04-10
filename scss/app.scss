@@ -1,0 +1,206 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: #ebf8f4;
+  color: #39445b;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+//text designs
+.tm-design-transform {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  &:before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: block;
+    border: 1px solid #44b9f4;
+    content: "";
+  }
+  &:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background: #44b9f4;
+    bottom: 7px;
+    position: absolute;
+    left: 0;
+  }
+  span {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    display: block;
+    border: 1px solid #44b9f4;
+    background: #fff;
+    &:nth-child(1) {
+      top: -5px;
+      left: -5px;
+    }
+    &:nth-child(2) {
+      top: -5px;
+      right: -5px;
+    }
+    &:nth-child(3) {
+      bottom: -5px;
+      left: -5px;
+    }
+    &:nth-child(4) {
+      bottom: -5px;
+      right: -5px;
+    }
+  }
+}
+
+.tm-design-circled {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  background-image: url(../img/highlight-circle.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.section-0 {
+  margin-top: 20vh;
+  text-align: center;
+
+  p {
+    font-size: 5vw;
+  }
+
+  cite {
+    //   display: block;
+    font-size: 3vw;
+  }
+}
+
+.rounded-div {
+  width: 150%;
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  height: 750%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -86.666%);
+  z-index: 1;
+}
+
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #141517;
+  z-index: 999;
+  transition: all 1s ease-in-out;
+  top: 0;
+  left: 0;
+  display: block;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  &.animate {
+    transform: translateY(-100%);
+  }
+
+  video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+// .gap {
+//   height: 200vh;
+// }
+
+/* Only necessary with horizontal scrolling */
+html[data-scroll-orientation="horizontal"] {
+  body {
+    width: fit-content;
+  }
+  [data-scroll-container] {
+    display: flex;
+  }
+}
+
+.tilt {
+  transform: rotate(9deg);
+}
+
+.wrapperRollingText {
+  white-space: nowrap;
+  font-family: "Playfair Display", serif;
+  margin-top: 100vh;
+  border-top: 1px solid #6f6f6f;
+}
+.rollingText {
+  font-size: 6vw;
+  display: inline-block;
+  padding-left: 10px;
+}
+.wrapperRollingText02 {
+  white-space: nowrap;
+  font-family: "Playfair Display", serif;
+  margin-top: 10px;
+}
+.rollingText02 {
+  font-size: 6vw;
+  display: inline-block;
+  padding-left: 13px;
+}
+span {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: green;
+}
+.section-1 {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 0 1rem;
+  .image-mask {
+    width: 80vw;
+    height: 80vh;
+    background: url("https://firebasestorage.googleapis.com/v0/b/hashnode-tutorials.appspot.com/o/bwimages%2Ftumblr_n92tblyC8d1s3sziio1_1280.jpg?alt=media&token=c5d75884-4bc3-46bb-815d-414d2ec68e4b");
+    // background-attachment: fixed;
+    background-size: cover;
+    background-position-x: 50%;
+    background-position-y: 90%;
+    background-size: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.pageSection {
+  height: 100vh;
+  width: 100%;
+  background: yellow;
+}

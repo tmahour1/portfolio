@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveSassCompile.settings.formats": [
+			{
+				"format": "expanded",
+				"extensionName": ".css",
+				"savePath": "css/",
+				"savePathReplacementPairs": null
+			}
+		],
+		"liveSassCompile.settings.autoprefix": [
+			
+		],
+	}
+}
+
+
+101962211348
+pmaAEH*&#399
